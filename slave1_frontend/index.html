@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pendaftaran Pasien - Slave 1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Form Pendaftaran Pasien</h1>
+
+    <form id="formPendaftaran">
+      <label for="nik">NIK:</label><br />
+      <input type="text" id="nik" name="nik" required /><br />
+
+      <label for="nama">Nama Lengkap:</label><br />
+      <input type="text" id="nama" name="nama" required /><br />
+
+      <label for="ttl">Tempat/Tanggal Lahir:</label><br />
+      <input type="text" id="ttl" name="ttl" required /><br />
+
+      <label for="alamat">Alamat:</label><br />
+      <textarea id="alamat" name="alamat" required></textarea><br />
+
+      <label>Jenis Kelamin:</label><br />
+      <input
+        type="radio"
+        id="jk_l"
+        name="jenis_kelamin"
+        value="Laki-laki"
+        required
+      />
+      <label for="jk_l">Laki-laki</label>
+      <input type="radio" id="jk_p" name="jenis_kelamin" value="Perempuan" />
+      <label for="jk_p">Perempuan</label><br />
+
+      <label for="poli">Poli Tujuan:</label><br />
+      <select id="poli" name="poli" required>
+        <option value="">--Pilih Poli--</option>
+        <option value="Umum">Umum</option>
+        <option value="Gigi">Gigi</option>
+        <option value="Anak">Anak</option>
+        <!-- Tambah sesuai kebutuhan --></select
+      ><br /><br />
+
+      <button type="submit">Daftar</button>
+    </form>
+
+    <h2>Daftar Antrian Hari Ini</h2>
+    <button id="btnSync">Sinkron ke Master</button>
+    <table border="1" id="tabelAntrian" style="width: 100%; margin-top: 10px">
+      <thead>
+        <tr>
+          <th>Nomor Antrian</th>
+          <th>Nama</th>
+          <th>Poli</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
